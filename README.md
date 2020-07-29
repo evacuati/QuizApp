@@ -26,6 +26,7 @@ git status
 * Work on your changes (do the coding)
 * Add files to git
 * Commit the changes (this kinda saves them so you can go back to work from another device)
+* Push the changes
 * Create a merge/pull request
 * Merge to the master branch
 
