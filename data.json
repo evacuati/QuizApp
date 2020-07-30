@@ -1,90 +1,92 @@
-[{
-	"question": "Humans and chimpanzees share roughly how much DNA?",
-	"answers": {
-		"A": { "98%":true },
-		"B": { "75%":false},
-		"C": {"23%":false},
-		"D": {"38%":false},
-	}	
-}]
-[{
-	"question": "What is the most abundant gas in the Earth’s atmosphere?",
-	"answers" : {
-		"A": {"Hydrogen":false},
-		"B": {"Methane":false},
-		"C": {"Nitrogen":true},
-		"D": {"Argon":false},
-	}
-}]
-[{
-	"question": "Roughly how long does it take for the sun’s light to reach Earth?",
-	"answers" : {
-		"A": {"8 minutes":true},
-		"B": {"17 minutes":false},
-		"C": {"2 days":false},
-		"D": {"4 hours":false},
-	}
-}]
-[{
-	"question": "Which famous British physicist wrote A Brief History of Time?",
-	"answers" : {
-		"A": {"Isaac Newton":false},
-		"B": {"Stephen Hawking":true},
-		"C": {"James Clerk Maxwell":false},
-		"D": {"Rudolf Peierls":false},
-	}
-}]
-[{
-	"question": "At what temperature are Celsius and Fahrenheit equal?",
-	"answers" : {
-		"A": {"0°":false},
-		"B": {"-100°":false},
-		"C": {"40°":false},
-		"D": {"-40°":true},
-	}
-}]
-[{
-	"question": "What modern-day country was Marie Curie born in?",
-	"answers" : {
-		"A": {"Italy":false},
-		"B": {"France":false},
-		"C": {"Poland":true},
-		"D": {"England":false},
-	}
-}]
-[{
-	"question": "What is the biggest planet in our solar system?",
-	"answers" : {
-		"A": {"Saturn":false},
-		"B": {"Jupiter":true},
-		"C": {"Earth":false},
-		"D": {"Venus":false},
-	}
-}]
-[{
-	"question": "What name is given for the number of protons found in the nucleus of an atom?",
-	"answers" : {
-		"A": {"Atomic Number":true},
-		"B": {"Inrow Number":false},
-		"C": {"Molecular Number":false},
-		"D": {"Proton Number":false},
-	}
-}]
-[{
-	"question": "How many vertebrae does the average human possess?",
-	"answers" : {
-		"A": {"35":false},
-		"B": {"27":false},
-		"C": {"40":false},
-		"D": {"33":true},
-	}
-}]
-[{
-	"question": "What was the name of the first man-made satellite launched by the Soviet Union in 1957?",
-	"answers" : {
-		"A": {"Buran":false},
-		"B": {"Polyus":false},
-		"C": {"Concorde":true},
-		"D": {"Sputnik":false},
-	}
-}]
+[
+	{
+		"question": "Humans and chimpanzees share roughly how much DNA?",
+		"answers": {
+			"A": { "98%":true },
+			"B": { "75%":false},
+			"C": {"23%":false},
+			"D": {"38%":false},
+		}	
+	},
+	{
+		"question": "What is the most abundant gas in the Earth’s atmosphere?",
+		"answers" : {
+			"A": {"Hydrogen":false},
+			"B": {"Methane":false},
+			"C": {"Nitrogen":true},
+			"D": {"Argon":false},
+		}
+	},
+	{
+		"question": "Roughly how long does it take for the sun’s light to reach Earth?",
+		"answers" : {
+			"A": {"8 minutes":true},
+			"B": {"17 minutes":false},
+			"C": {"2 days":false},
+			"D": {"4 hours":false},
+		}
+	},
+	{
+		"question": "Which famous British physicist wrote A Brief History of Time?",
+		"answers" : {
+			"A": {"Isaac Newton":false},
+			"B": {"Stephen Hawking":true},
+			"C": {"James Clerk Maxwell":false},
+			"D": {"Rudolf Peierls":false},
+		}
+	},
+	{
+		"question": "At what temperature are Celsius and Fahrenheit equal?",
+		"answers" : {
+			"A": {"0°":false},
+			"B": {"-100°":false},
+			"C": {"40°":false},
+			"D": {"-40°":true},
+		}
+	},
+	{
+		"question": "What modern-day country was Marie Curie born in?",
+		"answers" : {
+			"A": {"Italy":false},
+			"B": {"France":false},
+			"C": {"Poland":true},
+			"D": {"England":false},
+		}
+	},
+	{
+		"question": "What is the biggest planet in our solar system?",
+		"answers" : {
+			"A": {"Saturn":false},
+			"B": {"Jupiter":true},
+			"C": {"Earth":false},
+			"D": {"Venus":false},
+		}
+	},
+	{
+		"question": "What name is given for the number of protons found in the nucleus of an atom?",
+		"answers" : {
+			"A": {"Atomic Number":true},
+			"B": {"Inrow Number":false},
+			"C": {"Molecular Number":false},
+			"D": {"Proton Number":false},
+		}
+	},
+	{
+		"question": "How many vertebrae does the average human possess?",
+		"answers" : {
+			"A": {"35":false},
+			"B": {"27":false},
+			"C": {"40":false},
+			"D": {"33":true},
+		}
+	},
+	{
+		"question": "What was the name of the first man-made satellite launched by the Soviet Union in 1957?",
+		"answers" : {
+			"A": {"Buran":false},
+			"B": {"Polyus":false},
+			"C": {"Concorde":true},
+			"D": {"Sputnik":false},
+		}
+	},
+]
