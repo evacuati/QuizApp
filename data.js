@@ -84,10 +84,10 @@ data =
 	{
 		"question": "What was the name of the first man-made satellite launched by the Soviet Union in 1957?",
 		"answers" : [
-			{answer: "Buran", isCorrect: false},
-			{answer: "Polyus", isCorrect: false},
-			{answer: "Concorde", isCorrect: true},
-			{answer: "Sputnik", isCorrect: false},
+			{answer: "Buran 1", isCorrect: false},
+			{answer: "Polyus 2", isCorrect: false},
+			{answer: "Concorde 2", isCorrect: true},
+			{answer: "Sputnik 1", isCorrect: false},
 		]
 	},
 ]
