@@ -1,0 +1,23 @@
+questions =
+	[
+		{"id": 1,
+		"question": "Humans and chimpanzees share roughly how much DNA?"},
+		{"id": 2,
+		"question": "What is the most abundant gas in the Earth’s atmosphere?"},
+		{"id": 3,
+		"question": "Roughly how long does it take for the sun’s light to reach Earth?"},
+		{"id": 4,
+		"question": "Which famous British physicist wrote A Brief History of Time?"},
+		{"id": 5,
+		"question": "At what temperature are Celsius and Fahrenheit equal?"},
+		{"id": 6,
+		"question": "What modern-day country was Marie Curie born in?"},
+		{"id": 7,
+		"question": "What is the biggest planet in our solar system?"},
+		{"id": 8,
+		"question": "What name is given for the number of protons found in the nucleus of an atom?"},
+		{"id": 9,
+		"question": "How many vertebrae does the average human possess?"},
+		{"id": 10,
+		"question": "What was the name of the first man-made satellite launched by the Soviet Union in 1957?"},
+	]
