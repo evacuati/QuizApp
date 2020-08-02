@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 	<link href="styles.css" rel="stylesheet">
+	<title>Quiz App</title>
+</head>
+<body>
+	<!-- <div id="start">Start quiz!</div> -->
+ 	<div id="quiz" class="container">
+		<div id="question">Question</div>
+		<div id="choices" class="btn-grid">
+			<button class="choice" id="A" onclick="checkA()">A</button>	
+			<button class="choice" id="B" onclick="checkB();">B</button>	
+			<button class="choice" id="C" onclick="checkC();">C</button>
+			<button class="choice" id="D" onclick="checkD();">D</button>		
+		</div>
+		<p1 id="userAnswer">What's your answer?</p1>
+		<div class="controls">
+			<button id="next" onclick="next();">Next</button>
+		</div>	
+	</div>	
+ 	<script type="text/javascript" src="questions.js"></script>	
+ 	<script type="text/javascript" src="answers.js"></script>	
+ 	<script type="text/javascript" src="values.js"></script>	
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
