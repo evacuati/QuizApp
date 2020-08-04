@@ -1,4 +1,4 @@
-let listOfQuestions = createList()
+let listOfQuestions = createList();
 let listOfIndexes = []
 let number = listOfQuestions[0]
 let maxPoints = 10
@@ -24,11 +24,10 @@ function createList() {
 		listOfQuestions.push(listOfIndexes[i])
 	}
 	return listOfQuestions;
-}	
+}
 
 function getIndex(){
 	let number = listOfQuestions[0]
-	listOfQuestions.shift()
 }	
 
 function getQuestion(number) {
@@ -139,15 +138,16 @@ function checkD(number, values) {
 }
 
 createList();
+shuffle(listOfIndexes);
 quiz();
 function quiz() {
+	let number = listOfQuestions.shift();
 	getIndex();
-	console.log(questions)
-	console.log(answers)
-	console.log(values)
-	console.log(listOfIndexes)
+	console.log(listOfQuestions)
 	console.log(number)
-	console.log(getQuestion(number))	
+	console.log(getQuestion(number))
+	console.log(getAnswers(number))	
+	console.log(values[number])
 
 	document.getElementById("question").innerHTML = (getQuestion(number)["question"]);
 
@@ -155,7 +155,6 @@ function quiz() {
 	document.getElementById("B").innerHTML = (getAnswers(number)["B"]);
 	document.getElementById("C").innerHTML = (getAnswers(number)["C"]);
 	document.getElementById("D").innerHTML = (getAnswers(number)["D"]);	
-	console.log(getAnswers(number))
 
 	document.getElementById("A").onclick = () => (checkA(number, values));
 	document.getElementById("B").onclick = () => (checkB(number, values));
@@ -172,7 +171,10 @@ function quiz() {
  	console.log(C)
  	const D = document.getElementById("D").innerHTML
  	console.log(D)
-} //end of quiz function	
+} 
+
+//end of quiz function
+
 function next() {
  	document.getElementById("A").disabled = false;
 	document.getElementById("B").disabled = false;
@@ -185,6 +187,6 @@ function next() {
  	document.getElementById("userAnswer").innerHTML = "";
  	myQuestions++
  	document.getElementById("whereAmI").innerHTML = myQuestions + "/" + maxQuestions;
- 	getIndex();
+ 	// listOfQuestions.shift();
 	quiz();
  } 
