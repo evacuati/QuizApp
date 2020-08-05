@@ -1,3 +1,4 @@
+
 let listOfQuestions = createList();
 let listOfIndexes = []
 let number = listOfQuestions[0]
@@ -43,21 +44,21 @@ function checkA(number, values) {
 	document.getElementById("D").disabled = true;
 	if (values[number].A === true) {
  		document.getElementById("userAnswer").innerHTML = "You're right!";
- 		document.getElementById("A").style.borderColor = "green";
+ 		document.getElementById("A").style.outlineColor = "green";
  		myPoints++
  		document.getElementById("score").innerHTML = myPoints + "/" + maxPoints
  	}
     else {
  		document.getElementById("userAnswer").innerHTML = "You're wrong!";
- 		document.getElementById("A").style.borderColor = "red";
+ 		document.getElementById("A").style.outlineColor = "red";
  		if (values[number].B === true) {
- 			document.getElementById("A").style.borderColor = "green";
+ 			document.getElementById("A").style.outlineColor = "green";
 		}	
 		else if (values[number].C === true) {
- 			document.getElementById("C").style.borderColor = "green";
+ 			document.getElementById("C").style.outlineColor = "green";
 		}
 		else if (values[number].D === true) {
- 			document.getElementById("D").style.borderColor = "green";
+ 			document.getElementById("D").style.outlineColor = "green";
 		}
  	}
 }
@@ -68,21 +69,21 @@ function checkB(number, values) {
 	document.getElementById("D").disabled = true;
 	if (values[number].B === true) {
  		document.getElementById("userAnswer").innerHTML = "You're right!";
- 		document.getElementById("B").style.borderColor = "green";
+ 		document.getElementById("B").style.outlineColor = "green";
  		myPoints++
  		document.getElementById("score").innerHTML = myPoints + "/" + maxPoints
  	}
     else {
 	 	document.getElementById("userAnswer").innerHTML = "You're wrong!";
-	 	document.getElementById("B").style.borderColor = "red";
+	 	document.getElementById("B").style.outlineColor = "red";
 	 	if (values[number].A === true) {
-	 		document.getElementById("A").style.borderColor = "green";
+	 		document.getElementById("A").style.outlineColor = "green";
 		}	
 		else if (values[number].C === true) {
-	 		document.getElementById("C").style.borderColor = "green";
+	 		document.getElementById("C").style.outlineColor = "green";
 		}
 		else if (values[number].D === true) {
-	 		document.getElementById("D").style.borderColor = "green";
+	 		document.getElementById("D").style.outlineColor = "green";
 		}
  	}
 }
@@ -93,21 +94,21 @@ function checkC(number, values) {
 	document.getElementById("D").disabled = true;
 	if (values[number].C === true) {
  		document.getElementById("userAnswer").innerHTML = "You're right!";
- 		document.getElementById("C").style.borderColor = "green";
+ 		document.getElementById("C").style.outlineColor = "green";
  		myPoints++
  		document.getElementById("score").innerHTML = myPoints + "/" + maxPoints
  	}
     else {
  		document.getElementById("userAnswer").innerHTML = "You're wrong!";
- 		document.getElementById("C").style.borderColor = "red";
+ 		document.getElementById("C").style.outlineColor = "red";
  		if (values[number].A === true) {
- 				document.getElementById("A").style.borderColor = "green";
+ 				document.getElementById("A").style.outlineColor = "green";
 		}	
 		else if (values[number].B === true) {
-	 			document.getElementById("B").style.borderColor = "green";
+	 			document.getElementById("B").style.outlineColor = "green";
 		}
 		else if (values[number].D === true) {
-	 			document.getElementById("D").style.borderColor = "green";
+	 			document.getElementById("D").style.outlineColor = "green";
 		}
  	}	
 }
@@ -118,29 +119,39 @@ function checkD(number, values) {
 	document.getElementById("D").disabled = true;
 	if (values[number].D === true) {
  		document.getElementById("userAnswer").innerHTML = "You're right!";
- 		document.getElementById("D").style.borderColor = "green";
+ 		document.getElementById("D").style.outlineColor = "green";
  		myPoints++
  		document.getElementById("score").innerHTML = myPoints + "/" + maxPoints
  	}
     else {
  		document.getElementById("userAnswer").innerHTML = "You're wrong!";
- 		document.getElementById("D").style.borderColor = "red";
+ 		document.getElementById("D").style.outlineColor = "red";
  		 if (values[number].A === true) {
- 			document.getElementById("A").style.borderColor = "green";
+ 			document.getElementById("A").style.outlineColor = "green";
 		}	
 		else if (values[number].B === true) {
-	 		document.getElementById("B").style.borderColor = "green";
+	 		document.getElementById("B").style.outlineColor = "green";
 		}
 		else if (values[number].C === true) {
-	 			document.getElementById("C").style.borderColor = "green";
+	 			document.getElementById("C").style.outlineColor = "green";
 		}
  	}	
 }
 
-createList();
-shuffle(listOfIndexes);
-quiz();
+document.getElementById("start").onclick = () => createList();
+document.getElementById("start").onclick = () => shuffle(listOfIndexes);
+document.getElementById("start").onclick = () => (quiz());
+document.getElementById("end").onclick = () => createList();
+document.getElementById("end").onclick = () => shuffle(listOfIndexes);
+document.getElementById("end").onclick = () => (quiz());
+document.getElementById("end").onclick = () => number = 0
+document.getElementById("end").onclick = () => myPoints = 0
+document.getElementById("end").onclick = () => myQuestions = 1
 function quiz() {
+	document.getElementById("end-container").style.display = "none";
+	document.getElementById("quiz").style.display = "";
+	document.getElementById("start").style.display = "none";
+	document.getElementById("start-container").style.display = "none";
 	let number = listOfQuestions.shift();
 	getIndex();
 	console.log(listOfQuestions)
@@ -180,13 +191,19 @@ function next() {
 	document.getElementById("B").disabled = false;
 	document.getElementById("C").disabled = false;
 	document.getElementById("D").disabled = false;
- 	document.getElementById("A").style.borderColor = "";
- 	document.getElementById("B").style.borderColor = "";
- 	document.getElementById("C").style.borderColor = "";
- 	document.getElementById("D").style.borderColor = "";
- 	document.getElementById("userAnswer").innerHTML = "";
+ 	document.getElementById("A").style.outlineColor = "";
+ 	document.getElementById("B").style.outlineColor = "";
+ 	document.getElementById("C").style.outlineColor = "";
+ 	document.getElementById("D").style.outlineColor = "";
+ 	document.getElementById("userAnswer").innerHTML = "What's your answer?";
  	myQuestions++
  	document.getElementById("whereAmI").innerHTML = myQuestions + "/" + maxQuestions;
  	// listOfQuestions.shift();
-	quiz();
+ 	if (myQuestions <= 10) {
+		quiz();
+ 	}
+ 	else {
+ 		document.getElementById("quiz").style.display = "none";
+ 		document.getElementById("end-container").style.display = "";
+ 	}
  } 

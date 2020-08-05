@@ -12,3 +12,138 @@ body {
 	align-items: center;
 
 }
+.start {
+	width: 520px;
+	height: 360px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 2em;
+	background-color: #B0C4DE;
+	border: solid;
+	border-width: 0.5em;
+	border-color: #000000;
+}
+#start {
+	width: 270px;
+	height: 80px;
+	font-size: x-large;
+}
+.container {
+	width: 520px;
+	height: 360px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 2em;
+	background-color: #B0C4DE;
+	border: solid;
+	border-width: 0.5em;
+	border-color: #000000;
+}
+.question {
+	width: 480px;
+	height: 120px;
+	margin:0em;
+	padding:1em;
+	text-align: center;
+}
+.choices {
+	width: 480px;
+	height: 280px;
+	margin: 0;
+	padding:0em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center; 
+}
+.choice {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	margin-right: 1em;
+	padding: 0.3em;
+	width: 180px;
+	height: 40px;
+	background-color: #F0F8FF;
+	text-align: center;
+	border: solid black;
+	border-width: 0.1em;
+	outline: solid;
+	outline-width: 0.2em;
+	outline-color: #B0C4DE
+}
+.info {
+	width: 480px;
+	height: 210px;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
+	margin-top: 0;
+	padding:0;
+	display: inline-block;
+	align-items: center;
+	justify-content: space-between;
+	display:flex;
+}
+p, h2 {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.controls {
+	width: 480px;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+}
+.next {
+	margin-bottom: 0em;
+	margin-top: 0em;
+	padding: 0,5em;
+}
+.text {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	padding: 0em;
+}
+.score {
+	margin: 1em;
+	padding: 0.5em;
+	border: solid black;
+	border-width: 0.1px;
+	background-color: #F0F8FF;
+}
+.myquestion {
+	margin: 1em;
+	padding: 0.5em;
+	border: solid black;
+	border-width: 0.1px;
+	background-color: #F0F8FF;
+}
+.end {
+	width: 520px;
+	height: 360px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 2em;
+	background-color: #B0C4DE;
+	border: solid;
+	border-width: 0.5em;
+	border-color: #000000;
+}
+#end {
+	width: 270px;
+	height: 80px;
+	font-size: x-large;
+}
