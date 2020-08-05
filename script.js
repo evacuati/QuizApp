@@ -1,3 +1,23 @@
+function game() {
+	listOfQuestions = createList();
+	listOfIndexes = []
+	number = listOfQuestions[0]
+	maxPoints = 10
+	myPoints = 0
+	maxQuestions = 10
+	myQuestions = 1
+	createList();
+	getQuestion();
+	getAnswers();
+	document.getElementById("whereAmI").innerHTML = myQuestions + "/" + maxQuestions;
+	document.getElementById("score").innerHTML = myPoints + "/" + maxPoints
+	document.getElementById("A").onclick = () => checkA();
+	document.getElementById("B").onclick = () => checkB();
+	document.getElementById("C").onclick = () => checkC();
+	document.getElementById("D").onclick = () => checkD();
+	document.getElementById("next").onclick = () => next();
+	quiz();
+}
 
 let listOfQuestions = createList();
 let listOfIndexes = []
@@ -52,7 +72,7 @@ function checkA(number, values) {
  		document.getElementById("userAnswer").innerHTML = "You're wrong!";
  		document.getElementById("A").style.outlineColor = "red";
  		if (values[number].B === true) {
- 			document.getElementById("A").style.outlineColor = "green";
+ 			document.getElementById("B").style.outlineColor = "green";
 		}	
 		else if (values[number].C === true) {
  			document.getElementById("C").style.outlineColor = "green";
@@ -137,16 +157,10 @@ function checkD(number, values) {
 		}
  	}	
 }
-
 document.getElementById("start").onclick = () => createList();
 document.getElementById("start").onclick = () => shuffle(listOfIndexes);
 document.getElementById("start").onclick = () => (quiz());
-document.getElementById("end").onclick = () => createList();
-document.getElementById("end").onclick = () => shuffle(listOfIndexes);
-document.getElementById("end").onclick = () => (quiz());
-document.getElementById("end").onclick = () => number = 0
-document.getElementById("end").onclick = () => myPoints = 0
-document.getElementById("end").onclick = () => myQuestions = 1
+
 function quiz() {
 	document.getElementById("end-container").style.display = "none";
 	document.getElementById("quiz").style.display = "";
@@ -154,11 +168,6 @@ function quiz() {
 	document.getElementById("start-container").style.display = "none";
 	let number = listOfQuestions.shift();
 	getIndex();
-	console.log(listOfQuestions)
-	console.log(number)
-	console.log(getQuestion(number))
-	console.log(getAnswers(number))	
-	console.log(values[number])
 
 	document.getElementById("question").innerHTML = (getQuestion(number)["question"]);
 
@@ -173,37 +182,37 @@ function quiz() {
 	document.getElementById("D").onclick = () => (checkD(number, values));
 
 	document.getElementById("next").onclick = () => (next());
-
- 	const A = document.getElementById("A").innerHTML
- 	console.log(A)
- 	const B = document.getElementById("B").innerHTML
- 	console.log(B)
- 	const C = document.getElementById("C").innerHTML
- 	console.log(C)
- 	const D = document.getElementById("D").innerHTML
- 	console.log(D)
 } 
-
 //end of quiz function
 
 function next() {
- 	document.getElementById("A").disabled = false;
-	document.getElementById("B").disabled = false;
-	document.getElementById("C").disabled = false;
-	document.getElementById("D").disabled = false;
- 	document.getElementById("A").style.outlineColor = "";
- 	document.getElementById("B").style.outlineColor = "";
- 	document.getElementById("C").style.outlineColor = "";
- 	document.getElementById("D").style.outlineColor = "";
- 	document.getElementById("userAnswer").innerHTML = "What's your answer?";
- 	myQuestions++
- 	document.getElementById("whereAmI").innerHTML = myQuestions + "/" + maxQuestions;
- 	// listOfQuestions.shift();
- 	if (myQuestions <= 10) {
+ 	if (myQuestions < 10) {
+ 		document.getElementById("A").disabled = false;
+		document.getElementById("B").disabled = false;
+		document.getElementById("C").disabled = false;
+		document.getElementById("D").disabled = false;
+	 	document.getElementById("A").style.outlineColor = "";
+	 	document.getElementById("B").style.outlineColor = "";
+	 	document.getElementById("C").style.outlineColor = "";
+	 	document.getElementById("D").style.outlineColor = "";
+	 	document.getElementById("userAnswer").innerHTML = "What's your answer?";
+	 	myQuestions++
+	 	document.getElementById("whereAmI").innerHTML = myQuestions + "/" + maxQuestions;
 		quiz();
  	}
  	else {
  		document.getElementById("quiz").style.display = "none";
  		document.getElementById("end-container").style.display = "";
+ 		document.getElementById("end-score").innerHTML = myPoints + "/" + maxPoints
+ 		document.getElementById("A").disabled = false;
+		document.getElementById("B").disabled = false;
+		document.getElementById("C").disabled = false;
+		document.getElementById("D").disabled = false;
+		document.getElementById("A").style.outlineColor = "";
+	 	document.getElementById("B").style.outlineColor = "";
+	 	document.getElementById("C").style.outlineColor = "";
+	 	document.getElementById("D").style.outlineColor = "";
+	 	document.getElementById("userAnswer").innerHTML = "What's your answer?";
+ 		document.getElementById("end").onclick = () => (game());
  	}
  } 

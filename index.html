@@ -9,34 +9,40 @@
 	<title>Quiz App</title>
 </head>
 <body>
-	<div id="start-container" class="start">
-		<button id="start" onclick="quiz();">Start Quiz!</button>
-	</div>
- 	<div id="quiz" class="container" style="display: none;">
-		<div class="question" id="question">Question</div>
-		<div class="choices">
-			<button class="choice" id="A" onclick="checkA();">A</button>	
-			<button class="choice" id="B" onclick="checkB();">B</button>	
-			<button class="choice" id="C" onclick="checkC();">C</button>
-			<button class="choice" id="D" onclick="checkD();">D</button>		
+	<div id="game">
+		<div id="start-container" class="start">
+			<button id="start" onclick="quiz();">Start Quiz!</button>
 		</div>
-		<div class="controls">
-			<p1 class="text" id="userAnswer">What's your answer?</p1>
-			<button class="next" id="next" onclick="next();">Next</button>
+	 	<div id="quiz" class="container" style="display: none;">
+			<div class="question" id="question">Question</div>
+			<div class="choices">
+				<button class="choice" id="A" onclick="checkA();">A</button>	
+				<button class="choice" id="B" onclick="checkB();">B</button>	
+				<button class="choice" id="C" onclick="checkC();">C</button>
+				<button class="choice" id="D" onclick="checkD();">D</button>		
+			</div>
+			<div class="controls">
+				<p1 class="text" id="userAnswer">What's your answer?</p1>
+				<button class="next" id="next" onclick="next();">Next</button>
+			</div>	
+			<div class="info">
+				<div class="score">
+					<h2 id="score">0</h2>
+					<p>Your Score</p>
+				</div>	
+				<div class="myquestion">
+					<h2 id=whereAmI>1/10</h2>
+					<p>Questions</p>
+				</div>	
+			</div>	
 		</div>	
-		<div class="info">
+		<div id="end-container" class="end" style="display: none;">
 			<div class="score">
-				<h2 id="score">0</h2>
+				<h2 id="end-score">0</h2>
 				<p>Your Score</p>
 			</div>	
-			<div class="myquestion">
-				<h2 id=whereAmI>1/10</h2>
-				<p>Questions</p>
-			</div>	
+			<button id="end" onclick="game();">Try Again</button>
 		</div>	
-	</div>	
-	<div id="end-container" class="end" style="display: none;">
-		<button id="end" onclick="quiz();">Try Again</button>
 	</div>	
  	<script type="text/javascript" src="questions.js"></script>	
  	<script type="text/javascript" src="answers.js"></script>	
